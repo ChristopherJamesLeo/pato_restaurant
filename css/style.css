@@ -2,6 +2,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Courgette&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
+@import 'animate.css';
 /* font-family: 'Courgette', cursive;
 font-family: 'Montserrat', sans-serif;
 font-family: 'Poppins', sans-serif; */
@@ -33,6 +34,11 @@ body {
     font-family: var(--global-poppin-font);
 }
 
+body::-webkit-scrollbar{
+    width: 100%;
+    overflow-x: hidden;
+}
+
 /* start header */
 /* start nav bar */
 nav {
@@ -41,7 +47,7 @@ nav {
     position: absolute;
     left: 0;
     top: 0;
-    z-index: 1;
+    z-index: 2;
 }
 nav .nav-link {
     color : var(--global-white-color);
@@ -142,4 +148,134 @@ nav .nav-link.active {
 }
 
 /* end nav bar */
+/* start banner */
+.banner_carousel_container {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+
+}
+.banner_sub_title span {
+    color: var(--global-white-color);
+    font-size: 50px;
+    font-family: var(--global-courgette-font);
+    transition: var(--global-transition);
+}
+.banner_title h1 {
+    color: var(--global-white-color);
+
+    font-size: 90px;
+    letter-spacing: 5px;
+}
+@media(max-width:768px){
+    .banner_sub_title span {
+        font-size: 30px;
+
+    }
+    .banner_title h1 {
+        font-size: 50px;
+    }
+}
+.banner_btn {
+    padding: 10px 20px;
+    color: var(--global-red-pink-color);
+    background-color: var(--global-white-color);
+    border-radius: 10px;
+    font-weight: 300;
+}
+.banner_btn:hover {
+    color: var(--global-white-color);
+    background-color: var(--global-red-pink-color);
+}
+#banner_carousel .owl-item.active .banner_sub_title {
+    animation-duration: 1s;
+    animation-delay: 0s;
+}
+
+#banner_carousel .owl-item.active .banner_sub_title.b_1{
+    animation-name : rollIn;
+}
+#banner_carousel .owl-item.active .banner_sub_title.b_2{
+    animation-name : rotateInDownLeft;
+}
+
+#banner_carousel .owl-item.active .banner_sub_title.b_3{
+    animation-name : slideInDown;
+}
+
+#banner_carousel .owl-item.active .banner_title{
+    animation-duration: 1s;
+    animation-delay: 1s;
+}
+#banner_carousel .owl-item.active .banner_title.b_1{
+    animation-name : lightSpeedInRight;
+}
+#banner_carousel .owl-item.active .banner_title.b_2{
+    animation-name : rotateInUpRight;
+}
+#banner_carousel .owl-item.active .banner_title.b_3{
+    animation-name : fadeInUp;
+}
+
+#banner_carousel .owl-item.active .banner_btn_container{
+    animation-duration: 1s;
+    animation-delay: 2s;
+}
+#banner_carousel .owl-item.active .banner_btn_container.b_1{
+    animation-name: rotateIn;
+}
+#banner_carousel .owl-item.active .banner_btn_container.b_2{
+    animation-name: zoomIn;
+}
+#banner_carousel .owl-item.active .banner_btn_container.b_3{
+    animation-name: fadeInUp;
+}
+#banner_carousel{
+    position: relative;
+}
+#banner_carousel .owl-dots{
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    left: 0;
+    bottom: 20px;
+
+}
+#banner_carousel .owl-nav {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    opacity: 0;
+    transform: translateY(-50%);
+    transition: var(--global-transition);
+}
+#banner_carousel:hover .owl-nav {
+    opacity: 1;
+}
+#banner_carousel .owl-nav button {
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+    color: var(--global-footer-text-color);
+    background-color: rgba(0,0,0,0.1);
+    border-radius: 50%;
+    transition: var(--global-transition);
+    position: absolute;
+
+    
+}
+#banner_carousel .owl-nav button:hover {
+    background-color: #d61c2285;
+}
+#banner_carousel .owl-nav button.owl-prev{
+    left: 5%;
+}
+#banner_carousel .owl-nav button.owl-next{
+    right: 5%;
+}
+
+/* end banner */
 /* end header */

@@ -9,6 +9,14 @@ $(document).ready(function(){
     $(".close_navbar_slide_btn").click(function(){
         $(".navbar_slide_list_group").removeClass("active");
     })
+
+    $("#banner_carousel").owlCarousel({
+        items : 1,
+        nav : true,
+        dots : true,
+        loop : true,
+    })
+
 })
 
 // end jquery area
