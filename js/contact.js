@@ -15,7 +15,7 @@ $(document).ready(function(){
     })
 
     $(window).on("scroll",function(){
-        let scrollAmount = $(this).scrollTop()
+        let scrollAmount = $(this).scrollTop();
 
         if(scrollAmount > 0){
             $("nav").addClass("active");
@@ -29,53 +29,6 @@ $(document).ready(function(){
     })
 
     // start nav side bar
-
-
-    // start banner section
-    $("#banner_carousel").owlCarousel({
-        items : 1,
-        nav : true,
-        dots : true,
-        loop : true,
-        autoplay : true,
-    })
-    // end banner section
-    // start event section
-    $("#events_carousel").owlCarousel({
-        items : 1,
-        nav : true,
-        dots : true,
-        loop : true,
-        autoplay : true,
-    })
-    // end event section
-
-    // start reservation section
-    $("#selectdate").flatpickr(
-        {
-            minDate: "today",
-            maxDate: new Date().fp_incr(14) // 14 days from now
-        }
-    );
-    // console.log(new Date().getDate())
-    $("#time").flatpickr(
-        {
-            enableTime: true,
-            noCalendar: true,
-            dateFormat: "H:i",
-        }
-    );
-    // end reservation section
-
-    // start review section
-    $("#review_carousel").owlCarousel({
-        items : 1,
-        nav : true,
-        dots : true,
-        loop : true,
-        autoplay : true,
-    })
-    // end review section
 
     // img zoom 
     $('.footer_imgs_gallery,.nav_gallery').magnificPopup({
@@ -125,6 +78,7 @@ window.addEventListener("click",function(e){
     }
     
 })
+
 
 // start wow js
 new WOW().init();
