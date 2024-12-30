@@ -4,10 +4,10 @@ const ReservationBox = ({showImage}) => {
     function showImageFun(bool){
         if(bool){
             return(
-                <div class="px-1 col-lg-5 col-md-12 mb-2">
+                <div className="px-1 col-lg-5 col-md-12 mb-2">
                     {/* <!-- start image zoom --> */}
-                    <div class="img_zoom_container">
-                        <div class="img_container">
+                    <div className="img_zoom_container">
+                        <div className="img_container">
                             <img src="./../../public/imgs/gallery/booking-01.jpg.webp" width="100%" alt="our story" />
                         </div>
                     </div>

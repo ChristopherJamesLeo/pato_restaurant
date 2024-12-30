@@ -5,7 +5,7 @@ import "animate.css";
 import SubBanner from "../components/SubBanner";
 import GalleryShow from "../components/GalleryShow";
 
-const Home = () => {
+const Gallery = () => {
 
       useEffect(()=>{
       new WOW.WOW({
@@ -24,4 +24,4 @@ const Home = () => {
     )
 }
 
-export default Home;
+export default Gallery;
